@@ -21,8 +21,10 @@ const Coder = () => {
   });
   useEffect(() => {
     const getData = async () => {
-      const respone = await fetch("https://jsonplaceholder.typicode.com/todos");
-      const data = await respone.json();
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/todos"
+      );
+      const data = await response.json();
       dispatch({ type: "DATACHANGE", payload: { data: data } });
     };
     getData();
